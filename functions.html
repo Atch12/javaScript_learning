@@ -1,0 +1,76 @@
+<html>
+    <head>javascript tutorial</head>
+    <body>
+        <p id="demo"></p>
+    </body>
+    
+    <script>
+    //decleration
+
+        function name(val) {
+            document.getElementById("demo").innerHTML = val*val;
+        }
+        name(5);
+    </script>
+    <script>
+//
+        let x=function(){
+            alert("Hello! ");
+        }
+        let y=x
+    document.getElementById("demo").innerHTML = x();
+    </script>-->
+    <script>
+        //constructor
+        var Myfunction=new Function("a","b","return a+b") 
+        var z= Myfunction(2,3)
+        document.getElementById("demo").innerHTML = z+"Its the sum";    
+        
+    </script>
+    <script>
+        //self invoking functions
+        (function(){
+            alert("Hello! World");
+        }())
+    </script>-->
+    <script>
+        function Product(a,b){
+            return a*b
+        }
+        let k = Product(2,5)*5
+        document.getElementById("demo").innerHTML = k +"Its the product";
+    </script>
+    <script>
+        //funtion as object
+        var body= "return Math.PI*rad*rad"
+        var circle=new Function ("rad",body)
+        alert(circle(10));
+    </script>-->
+    <script>
+        //arrow functions
+        let func=(a,b,c)=>{return a*b*c}
+        let product = func(2,3,4)
+        document.getElementById("demo").innerHTML = product +"Its the product";
+    </script>
+    <script>
+        //generator return more than 1 value
+        function* generateSequence(){
+
+            yield 1;
+            yield 2;
+            yield 3;
+            return 4;
+        }
+        let generator=generateSequence();
+        let one = generator.next();
+        let two = generator.next();
+        let three = generator.next();
+        let four = generator.next();
+       
+        alert(JSON.stringify(one));
+        alert(JSON.stringify(two));
+        alert(JSON.stringify(three));
+        alert(JSON.stringify(four));
+        
+    </script>
+</html>
